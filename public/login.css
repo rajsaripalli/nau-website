@@ -1,0 +1,130 @@
+/* Set entire page background image */
+body {
+    background: url('https://nau.edu/wp-content/uploads/sites/217/2023/05/9398_campus_overview_04042017.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #000; /* Dark text for contrast against light areas of the image */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    min-height: 100vh; /* Ensure the content area takes full viewport height */
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content at the top */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Content section */
+.content {
+    width: 100%;
+    margin-top: 50px; /* Add margin to push content slightly down from the top */
+    text-align: center; /* Center the text */
+}
+
+/* Center the heading */
+.container h1 {
+    color: #000; /* Ensure heading is readable */
+}
+
+/* Add some margin below the description text */
+.container p {
+    margin-bottom: 20px; /* Add gap between the paragraph and the next element */
+}
+
+/* Paragraph and login container alignment */
+.container p, .login-container {
+    margin: 0;
+    color: #000; /* Darker text for visibility */
+    text-align: center; /* Ensure the text is centered */
+}
+
+/* Styling for the login button */
+.login-container form button {
+    margin: 0 auto; /* Center button */
+    padding: 2px 4px; /* Smaller button size */
+    font-size: 0.6em; /* Smaller font size for button */
+    width: 80px; /* Set fixed smaller width */
+    height: 20px; /* Set fixed smaller height */
+    background-color: #4CAF50; /* Green button */
+    color: #fff; /* White text on button */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Image positioning */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Styling the form layout */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Center form fields */
+}
+
+/* Input field styling */
+.login-container input {
+    width: 250px; /* Increased input field width */
+    text-align: start; /* Ensure cursor starts at the beginning */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Label positioning with adjustable offsets */
+.login-container label {
+    font-weight: bold;
+    color: #000; /* Dark labels */
+    margin-top: 20px; /* Add gap between the previous paragraph and the label */
+}
+
+/* Links styling */
+.login-container a {
+    font-weight: bold;
+    color: black; /* Blue link */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Style tweaks for better spacing */
+h2, h3 {
+    margin-bottom: 5px;
+    color: #000; /* Dark text for headings */
+}
+
+/* Mobile responsive tweak */
+@media (max-width: 600px) {
+    .container {
+        gap: 10px;
+    }
+    .image-container img {
+        margin-left: 0;
+    }
+}

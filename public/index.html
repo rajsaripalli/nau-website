@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="index.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <h1>Sign Up for NAU Groceries</h1>
+    <p>Join us and start shopping today!</p>
+    <form id="userForm">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstname">First Name:</label><br>
+                <input type="text" id="firstname" name="firstname" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label><br>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+            </div>
+        </div>
+
+        <div class="form-row-vertical">
+            <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="nauid">NAU ID:</label><br>
+                <input type="number" id="nauid" name="nauid" required><br><br>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label><br>
+                <input type="password" id="confirmpassword" name="confirmpassword" required><br><br>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script>
+    <p><a href="login.html">Go back to login page</a></p>
+</body>
+</html>

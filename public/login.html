@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAU Groceries</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to NAU Groceries</h1>
+            <p>Your one-stop shop for campus essentials!</p>
+
+            <div class="login-container">
+                <form id="loginForm">
+                    <label for="nauid">NAU ID</label>
+                    <input type="text" id="nauid" name="nauid" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" minlength="6" autocomplete="current-password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+
+                <h3>Not an NAU student?</h3>
+                <p><a href="index.html">Create an account to shop with us</a></p>
+                <p><a href="admin.html">Admin login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nauid = document.getElementById('nauid').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ nauid, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Login successful') {
+                    alert('Login successful');
+                    // Redirect to the shopping page
+                    window.location.href = 'shopping.html'; // Adjust URL if necessary
+                } else {
+                    alert('Invalid NAU ID or password');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error logging in');
+            });
+        });
+    </script>
+</body>
+</html>

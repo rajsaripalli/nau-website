@@ -1,0 +1,87 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold; 
+    padding: 20px;
+    text-align: center; /* Center all the text within the body */
+    background-image: url('https://nau.edu/wp-content/uploads/sites/217/2023/05/9398_campus_overview_04042017.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+}
+
+/* Flexbox styling for form-row */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Styling for each form group */
+.form-group {
+    width: 48%; /* Ensure the inputs in the row are side by side */
+}
+
+/* New styling for vertical layout of Email and NAU ID */
+.form-row-vertical {
+    display: block;  /* Stack elements vertically */
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 100%;  /* Make inputs 100% width in vertical stack */
+}
+
+/* Ensure input fields have full width */
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+}
+input[type="email"]{
+    width: 40%;
+    padding: 8px;
+    margin-top: 5px;
+}
+input[type="number"]{
+    width: 25%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the 'Go back to login page' link */
+a {
+    color: yellow; /* Make the link text black */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for a clear interactive effect */
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Grocery Store</h1>
+        <div id="cart-summary">
+            <span id="cart-count">Cart: 0 items</span>
+            <span id="total-price">Total: $0.00</span>
+        </div>
+    </header>
+
+    <main>
+        <h2>Available Products</h2>
+        <div id="product-list" class="product-list">
+            <!-- Existing Products -->
+            <div class="product">
+                <img src="https://api.time.com/wp-content/uploads/2015/07/bread.jpeg" alt="Bread">
+                <h3>Bread</h3>
+                <p>Freshly baked bread</p>
+                <p><strong>$1.50</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="1" data-name="Bread">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="1.50" id="bread-quantity">
+                    <button class="btn quantity-plus" data-id="1" data-name="Bread">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="1" data-name="Bread" data-price="1.50">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i5.walmartimages.com/seo/Great-Value-Whole-Vitamin-D-Milk-Gallon-Plastic-Jug-128-Fl-Oz_6a7b09b4-f51d-4bea-a01c-85767f1b481a.86876244397d83ce6cdedb030abe6e4a.jpeg" alt="Milk">
+                <h3>Milk</h3>
+                <p>Organic full-fat milk</p>
+                <p><strong>$2.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="2" data-name="Milk">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="2.00" id="milk-quantity">
+                    <button class="btn quantity-plus" data-id="2" data-name="Milk">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="2" data-name="Milk" data-price="2.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.hhs1.com/hubfs/carrots%20on%20wood-1.jpg" alt="Carrot">
+                <h3>Carrot</h3>
+                <p>Fresh organic carrots</p>
+                <p><strong>$3.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="3" data-name="Carrot">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="3.00" id="carrot-quantity">
+                    <button class="btn quantity-plus" data-id="3" data-name="Carrot">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="3" data-name="Carrot" data-price="3.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i5.walmartimages.com/seo/Great-Value-Extra-Virgin-Olive-Oil-101-fl-oz-Bottle_f06ca209-299a-4e81-b3dd-20e93557580a.e2a6f3a6adda53e53633f80a6ccc4c2d.jpeg" alt="Olive Oil">
+                <h3>Olive Oil</h3>
+                <p>Extra virgin olive oil</p>
+                <p><strong>$8.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="4" data-name="Olive-Oil">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="8.00" id="olive-oil-quantity">
+                    <button class="btn quantity-plus" data-id="4" data-name="Olive-Oil">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="4" data-name="Olive-Oil" data-price="8.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://twobrothers.co/cdn/shop/files/RoyalBasmatiRice20Lbback.jpg" alt="Rice">
+                <h3>Rice</h3>
+                <p>Long grain rice</p>
+                <p><strong>$5.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="5" data-name="Rice">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="5.00" id="rice-quantity">
+                    <button class="btn quantity-plus" data-id="5" data-name="Rice">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="5" data-name="Rice" data-price="5.00">Add to Cart</button>
+            </div>
+
+            <!-- New Products -->
+            <div class="product">
+                <img src="https://www.heddensofwoodtown.co.uk/wp-content/uploads/2020/05/tomatoes_opt.jpg" alt="Tomatoes">
+                <h3>Tomatoes</h3>
+                <p>Fresh red tomatoes</p>
+                <p><strong>$2.50</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="6" data-name="Tomatoes">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="2.50" id="tomatoes-quantity">
+                    <button class="btn quantity-plus" data-id="6" data-name="Tomatoes">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="6" data-name="Tomatoes" data-price="2.50">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://growhoss.com/cdn/shop/products/yellow-sweet-spanish-utah-onion.jpg" alt="Onions">
+                <h3>Onions</h3>
+                <p>Fresh onions</p>
+                <p><strong>$1.75</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="7" data-name="Onions">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="1.75" id="onions-quantity">
+                    <button class="btn quantity-plus" data-id="7" data-name="Onions">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="7" data-name="Onions" data-price="1.75">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i5.walmartimages.com/seo/Lay-s-Classic-Potato-Chips-8-oz-Bag_f1852517-59f2-467f-b176-3ea1f2b098ae.a06a239111071c1595ab75cf3bf2323f.jpeg" alt="Lays">
+                <h3>Lays</h3>
+                <p>Potato chips</p>
+                <p><strong>$3.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="8" data-name="Lays">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="3.00" id="lays-quantity">
+                    <button class="btn quantity-plus" data-id="8" data-name="Lays">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="8" data-name="Lays" data-price="3.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://newyorkbeverage.com/wp-content/uploads/2020/07/coke-12oz-6pk.jpg" alt="Coke">
+                <h3>Coke</h3>
+                <p>Refreshing Coca-Cola</p>
+                <p><strong>$1.50</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="9" data-name="Coke">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="1.50" id="coke-quantity">
+                    <button class="btn quantity-plus" data-id="9" data-name="Coke">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="9" data-name="Coke" data-price="1.50">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.gardengrocer.com/attachments/photos/high_res/1361.jpg" alt="Mountain Dew">
+                <h3>Mountain Dew</h3>
+                <p>Popular citrus-flavored soda</p>
+                <p><strong>$1.75</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="10" data-name="Mountain-Dew">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="1.75" id="mountain-dew-quantity">
+                    <button class="btn quantity-plus" data-id="10" data-name="Mountain-Dew">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="10" data-name="Mountain-Dew" data-price="1.75">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.bhg.com/thmb/WWUvFJS-_xwL0-t3AB7oJKRL1T4=/5924x0/filters:no_upscale():strip_icc()/bhg-should-you-wash-raw-chicken-thighs-JD_1916-fbf658cbc83d48c2aeaaf794b3c31208.jpg" alt="Chicken">
+                <h3>Chicken</h3>
+                <p>Fresh chicken breasts</p>
+                <p><strong>$7.50</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="11" data-name="Chicken">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="7.50" id="chicken-quantity">
+                    <button class="btn quantity-plus" data-id="11" data-name="Chicken">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="11" data-name="Chicken" data-price="7.50">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.pixabay.com/photo/2016/08/11/08/49/potatoes-1585075_640.jpg" alt="Potatoes">
+                <h3>Potatoes</h3>
+                <p>Fresh potatoes</p>
+                <p><strong>$2.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="12" data-name="Potatoes">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="2.00" id="potatoes-quantity">
+                    <button class="btn quantity-plus" data-id="12" data-name="Potatoes">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="12" data-name="Potatoes" data-price="2.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.everydayhealth.com/images/diet-nutrition/apples-101-about-1440x810.jpg" alt="Apples">
+                <h3>Apples</h3>
+                <p>Fresh apples</p>
+                <p><strong>$3.50</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="13" data-name="Apples">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="3.50" id="apples-quantity">
+                    <button class="btn quantity-plus" data-id="13" data-name="Apples">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="13" data-name="Apples" data-price="3.50">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.rd.com/wp-content/uploads/2017/12/01_oranges_Finally—Here’s-Which-“Orange”-Came-First-the-Color-or-the-Fruit_691064353_Lucky-Business.jpg" alt="Oranges">
+                <h3>Oranges</h3>
+                <p>Fresh oranges</p>
+                <p><strong>$4.00</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="14" data-name="Oranges">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="4.00" id="oranges-quantity">
+                    <button class="btn quantity-plus" data-id="14" data-name="Oranges">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="14" data-name="Oranges" data-price="4.00">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.mafrservices.com/pim-content/KWT/media/product/552798/1722492003/552798_main.jpg" alt="Water">
+                <h3>Water</h3>
+                <p>Fresh bottled water</p>
+                <p><strong>$0.75</strong></p>
+                <div class="quantity-controls">
+                    <button class="btn quantity-minus" data-id="15" data-name="Water">-</button>
+                    <input type="number" value="1" min="1" class="quantity" data-price="0.75" id="water-quantity">
+                    <button class="btn quantity-plus" data-id="15" data-name="Water">+</button>
+                </div>
+                <button class="btn add-to-cart" data-id="15" data-name="Water" data-price="0.75">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart-details">
+            <h3>Cart Details</h3>
+            <ul id="cart-details-list"></ul>
+            <button id="pay-btn" onclick="checkout()">Pay Now</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Grocery Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="shopping.js"></script>
+</body>
+</html>
